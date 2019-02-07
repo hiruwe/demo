@@ -1,10 +1,17 @@
 pipeline {
-    agent { dockerfile true }
+    agent { docker { image 'demo' } }
     stages {
-        stage('Test') {
+        stage('build1') {
             steps {
-                sh 'node --version'
-                sh 'svn --version'
+                sh 'javac --version'
+            }
+        }
+    }
+    agent { docker { image 'demo' } }
+    stages {
+        stage('build2') {
+            steps {
+                sh 'pwd'
             }
         }
     }
