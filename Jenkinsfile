@@ -1,7 +1,7 @@
 pipeline {
     agent { dockerfile true }
     stages {
-        stage('build') {
+        stage('Build') {
         	steps {
                 sh 'javac --version'
             }
