@@ -5,11 +5,11 @@ pipeline {
             steps {
                 sh 'mvn --version'
             }
-        }, stage('build') {
+        } stage('build') {
         	steps {
                 sh 'mvn --version'
             }
-        },stage('Deploy') {
+        }stage('Deploy') {
         	steps {
                 sh 'mvn --version'
             }
