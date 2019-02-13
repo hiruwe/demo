@@ -1,15 +1,20 @@
 package com.example.demo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Student {
 	@Id
-	@GeneratedValue
-	private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
+	@Column
 	private String name;
+	@Column
 	private Integer marks;
 	
 	public Long getId() {
