@@ -6,14 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DemoController {
-	
-/*	@RequestMapping(value = "/hello", method = RequestMethod.GET)
-	public String sayHello() {
-		
-		return new String("Helloooo");	
-	
-	}
-	*/
+
 	@Autowired
 	private StudentDao studentDao;
 	
